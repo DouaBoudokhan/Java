@@ -19,7 +19,6 @@ public class Zoo {
     }
 
     public void setName(String name) {
-        // Check if the name is not null or empty
         if (name != null && !name.trim().isEmpty()) {
             this.name = name;
         } else {
