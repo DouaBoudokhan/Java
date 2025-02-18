@@ -3,37 +3,10 @@ package tn.esprit.gestionzoo.entities;
 
 public class Zoo {
     Animal[] animals;
-    private String name;
-    private String city;
-    private final static int nbrCages = 25;
-    private int count;
-
-    public String getName(){
-        return this.name;
-    }
-    public String getCity(){
-        return this.city;
-    }
-    public int getCount(){
-        return count;
-    }
-
-    public void setName(String name) {
-        if (name != null && !name.trim().isEmpty()) {
-            this.name = name;
-        } else {
-            System.out.println("Invalid name");
-        }
-    }
-
-    public void setCity(String city){
-        this.city=city;
-    }
-    public void setCount(int count){
-        this.count=count;
-    }
-
-
+    String name;
+    String city;
+    final static int nbrCages = 25;
+    int count;
 
     public Zoo(String name, String city, Animal animal) {
         this.name = name;
