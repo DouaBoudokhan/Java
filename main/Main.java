@@ -2,16 +2,12 @@ package tn.esprit.gestionzoo.main;
 
 import tn.esprit.gestionzoo.entities.Animal;
 import tn.esprit.gestionzoo.entities.Zoo;
-import tn.esprit.gestionzoo.entities.Terrestre;
-import tn.esprit.gestionzoo.entities.Aquatique;
-import tn.esprit.gestionzoo.entities.Dolphin;
-import tn.esprit.gestionzoo.entities.Penguin;
 
 public class Main {
     public static void main(String[] args) {
         // Create some animals
         Animal lion1 = new Animal("Felidae", "Kovu", 5, true);
-        Animal lion2 = new Animal("Felidae", "Simba", 5, true);  // Same name as lion1
+        Animal lion2 = new Animal("Felidae", "Simba", 5, true);  
         Animal tiger = new Animal("Felidae", "Raja", 4, true);
 
         // Create a zoo
@@ -44,19 +40,6 @@ public class Main {
         System.out.println("\nComparing zoos:");
         Zoo biggerZoo = Zoo.comparerZoo(myZoo, anotherZoo);
         System.out.println("Bigger zoo is: " + biggerZoo.toString());
-
-        //instantiation
-        Aquatique aqua= new Aquatique();
-        Penguin penguin= new Penguin("Delphinidae","batri9",10,false,"Polar",500);
-        Dolphin dolphin= new Dolphin("Spheniscidae","dolph",2,true,"Marine",60);
-
-        System.out.println("\nthe penguin and the dolphin information");
-        System.out.println(penguin.toString());
-        System.out.println(dolphin.toString()+"\n");
-
-        aqua.swim();
-        penguin.swim();
-        dolphin.swim();
 
     }
 }

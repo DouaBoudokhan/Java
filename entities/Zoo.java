@@ -19,7 +19,6 @@ public class Zoo {
     }
 
     public void setName(String name) {
-        // Check if the name is not null or empty
         if (name != null && !name.trim().isEmpty()) {
             this.name = name;
         } else {
@@ -54,16 +53,13 @@ public class Zoo {
     public boolean addAnimal(Animal animal) {
         if (animal == null) return false;
 
-        // Check if animal already exists
         if (searchAnimal(animal) != -1) {
-            return false;  // Animal already exists
+            return false;  
         }
 
-        // Check if zoo is full
         if (isZooFull()) {
             return false;
         }
-        // Find first empty slot
         for (int i = 0; i < nbrCages; i++) {
             if (animals[i] == null) {
                 animals[i] = animal;
